@@ -95,7 +95,9 @@ public class BuckleMyShoe
         else if (num == 9 || num == 10) 
         {
             line = "9, 10, Big fat hen";
-        } else {
+        } 
+        else 
+        {
             line = "You did not enter a valid input"; // Error message for invalid input
         }
     }
