@@ -39,46 +39,61 @@
 
 import java.util.Scanner; // Import the Scanner class for user input
 
-public class BuckleMyShoe {
-    private String line; // Instance variable to store the selected line from the rhyme
+public class BuckleMyShoe 
+{
+    private String line; //Create a variable to store the selected line from the rhyme
     
     // Constructor initializes the line variable
-    public BuckleMyShoe() {
+    public BuckleMyShoe() 
+    {
         line = new String(""); // Initializes line to an empty string
     }
 
     // Main method to start the program
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         BuckleMyShoe bms = new BuckleMyShoe(); // Create an instance of BuckleMyShoe
         bms.findIt(); // Call the method to process user input
     }
 
     // Method to find and print the corresponding line based on user input
-    public void findIt() {
+    public void findIt() 
+    {
         byte var = getInput(); // Get user input
         decideWhich(var); // Determine the corresponding line
         print(); // Print the line
     }
 
     // Method to prompt user for input and return it
-    public byte getInput() {
+    public byte getInput() 
+    {
         Scanner in = new Scanner(System.in); // Initialize Scanner for input
         System.out.print("\n\n\n\t\t\t Welcome to Buckle My Shoe!\nEnter a number from 1-10: ");
         return in.nextByte(); // Read and return user input as byte
     }
 
     // Method to decide which line corresponds to the input number
-    public void decideWhich(byte num) {
+    public void decideWhich(byte num) 
+    {
         // Conditional statements to set the line based on input
-        if (num == 1 || num == 2) {
+        if (num == 1 || num == 2) 
+        {
             line = "1, 2, Buckle my shoe";
-        } else if (num == 3 || num == 4) {
+        } 
+        else if (num == 3 || num == 4) 
+        {
             line = "3, 4, Shut the door";
-        } else if (num == 5 || num == 6) {
+        }
+        else if (num == 5 || num == 6) 
+        {
             line = "5, 6, pick up sticks";
-        } else if (num == 7 || num == 8) {
+        } 
+        else if (num == 7 || num == 8) 
+        {
             line = "7, 8, Lay them straight";
-        } else if (num == 9 || num == 10) {
+        } 
+        else if (num == 9 || num == 10) 
+        {
             line = "9, 10, Big fat hen";
         } else {
             line = "You did not enter a valid input"; // Error message for invalid input
@@ -86,7 +101,8 @@ public class BuckleMyShoe {
     }
 
     // Method to print the selected line
-    public void print() {
+    public void print() 
+    {
         System.out.println(line + "\n\n\n"); // Output the line to the console
     }
 }
